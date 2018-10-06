@@ -65,20 +65,42 @@ public class Box<F,S> {
      * swapFirstWith
      */
     public void swapFirstWith(Box<F, ?> box) {
-        F tempFirst = this.getFirst();
+        F temp = this.getFirst();
         this.setFirst(box.getFirst());
-        box.setFirst(tempFirst);
+        box.setFirst(temp);
+    }
+
+    /***
+     * swapFirstWith
+     */
+    public void swapSecondWith(Box<?, S> box) {
+        S temp = this.getSecond();
+        this.setSecond(box.getSecond());
+        box.setSecond(temp);
+    }
+
+    /***
+     * swapItemsWith
+     */
+    public void swapItemsWith(Box<F, S> box) {
+        this.swapFirstWith(box);
+        this.swapSecondWith(box);
     }
 
     /***
      * moveFirstToSecond
      */
-    public static <T> void moveFirstToSecond(Box<T, ? super T> to) {
-        to.setSecond(to.getFirst());
-        to.setFirst(null);
+    public static <T> void moveFirstToSecond(Box<T, ? super T> box) {
+        box.setSecond(box.getFirst());
+        box.setFirst(null);
     }
 
-//    swapItemsWith
-//    swapItems
-
+    /***
+     * swapItems
+     */
+    public static <T> void swapItems(Box<T, T> box) {
+        T temp = box.getFirst();
+        box.setFirst(box.getSecond());
+        box.setSecond(temp);
+    }
 }
