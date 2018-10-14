@@ -2,12 +2,13 @@ package e1;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class Dictionary<V> implements  Iterable<Dictionary.Association<V>> {
     private final ArrayList<Association<V>> assocList = new ArrayList<>();
 
-    public static class Association<V> {
+    public static class Association<V> implements Comparable<String> {
         private final String key;
         private final V val;
 
@@ -31,23 +32,31 @@ public class Dictionary<V> implements  Iterable<Dictionary.Association<V>> {
                     ", val=" + val +
                     '}';
         }
+
+        @Override
+        public int compareTo(String key) {
+            return this.getKey().compareTo(key);
+        }
     }
 
     private int indexOf(String key) {
-        int idx = -1;
 
-        for (int i=0; i<assocList.size(); i++) {
-            int comparison = assocList.get(i).getKey().compareTo(key);
-            if(comparison == 0) {
-                idx = i;
-                break;
-            } else if(comparison > 0) {
-                break;
-            } else {
-                idx--;
-            }
-        }
-        return idx;
+        int cidx = Collections.binarySearch(assocList, key);
+        return cidx;
+//        int idx = -1;
+//
+//        for (int i=0; i<assocList.size(); i++) {
+//            int comparison = assocList.get(i).getKey().compareTo(key);
+//            if(comparison == 0) {
+//                idx = i;
+//                break;
+//            } else if(comparison > 0) {
+//                break;
+//            } else {
+//                idx--;
+//            }
+//        }
+//        return idx;
     }
 
     public int size() {
@@ -96,15 +105,15 @@ public class Dictionary<V> implements  Iterable<Dictionary.Association<V>> {
     }
 
     public V remove(String key){
+        if(key == null)
+            throw new IllegalArgumentException();
+
         V oldValue = null;
-        for (int i = 0; i<assocList.size(); i++) {
-            Association<V> assoc = assocList.get(i);
-            if (assoc.getKey().compareTo(key) == 0) {
-                oldValue = assoc.getValue();
-                assocList.remove(i);
-                break;
-            }
+        int idx = indexOf(key);
+        if(idx >= 0) {
+            oldValue = assocList.remove(idx).getValue();
         }
+
         return oldValue;
     }
 

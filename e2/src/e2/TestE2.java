@@ -15,8 +15,20 @@ public class TestE2 {
         myDic.put("Barbara", LocalDate.parse("19.10.1970", formatter));
         myDic.put("Alessandra", LocalDate.parse("10.05.1970", formatter));
         myDic.put("Luca", LocalDate.parse("01.05.1990", formatter));
+        printCollection(myDic);
 
+        LocalDate old = myDic.remove("Alessandro");
+        printCollection(myDic);
+
+        myDic.get("BBB");
+        myDic.get("Luca");
+
+    }
+
+    private static void printCollection(Dictionary<LocalDate> myDic) {
         for (Dictionary.Association a : myDic)
             System.out.println(a);
+
+        System.out.println();
     }
 }
