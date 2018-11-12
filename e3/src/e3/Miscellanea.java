@@ -3,7 +3,10 @@ package e3;
 import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Random;
+import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
 public class Miscellanea {
@@ -64,7 +67,7 @@ public class Miscellanea {
      * passed as arguments, obtained as return values,
      * stored in data structures, etc.
      */
-        
+
         Function<Integer, Function<Integer, Integer>>makeAdder = x -> y -> x + y;
         /*
          * As declared by its type, the λ makeAdder accepts an Integer

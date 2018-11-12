@@ -2,8 +2,12 @@ package e2;
 
 import e1.Dictionary;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.OptionalDouble;
 
 public class TestE2 {
     public static void main(String[] args) {
@@ -23,6 +27,8 @@ public class TestE2 {
         myDic.get("BBB");
         myDic.get("Luca");
 
+        ArrayList a = new ArrayList();
+        a.stream();
     }
 
     private static void printCollection(Dictionary<LocalDate> myDic) {

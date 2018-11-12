@@ -10,6 +10,11 @@ public class Statistics {
     public Statistics() {
     }
 
+    public void accumulate(BigDecimal revenues, int transactions) {
+        totalRevenues = totalRevenues.add(revenues);
+        totalTransactions += transactions;
+    }
+
     public void setTotalRevenues(BigDecimal totalRevenues) {
         this.totalRevenues = totalRevenues;
     }
