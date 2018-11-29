@@ -7,11 +7,16 @@ import java.util.stream.Stream;
 
 public class TestStream {
     public static void main(String args[]) {
-        testListOfList();
         testSharedMutation();
+        testListOfList();
     }
 
     private static void testSharedMutation() {
+        // infinite stream
+        Stream.iterate(100, e -> e+1)    // unbounded, lazy
+                .limit(10)                     // bounded, lazy
+                .forEach(System.out::println); // terminal op (not lazy), 100 .. 109
+
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 1, 2, 3, 4, 5);
 
         Collection collection = numbers;
