@@ -3,24 +3,30 @@ package e4;
 import java.sql.*;
 
 public class PopulateDB {
-    static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException {
         try (Connection conn = DriverManager.getConnection(Utilities.getConnString(), "SA", "")) {
 
             try(PreparedStatement stmt = conn.prepareStatement(
-                    "insert into (id,name,salary,managerId)" +
-                            "Employee values (" +
+                    "insert into Employee (id,name,salary,managerId) " +
+                            " values (" +
                             "?, " +
                             "?, " +
-                            "?" +
-                            ")")) {
+                            "?, " +
+                            "?)")) {
                 conn.setAutoCommit(false);
 
-                int id = 101;
-                String name = "il Momi";
-                double salary = 123.45;
-                Integer managerId = null;
-
-                addEmployee(stmt, id, name, salary, managerId);
+                addEmployee(stmt, 101, "il Momi", 123.45, null);
+                    addEmployee(stmt, 113, "Andrea", 113.45, 101);
+                        addEmployee(stmt, 313, "Svetlanka", 123.45, 113);
+                        addEmployee(stmt, 222, "Markko", 123.45, 113);
+                    addEmployee(stmt, 747, "Jakopo", 113.45, 101);
+                        addEmployee(stmt, 606, "Jamal", 103.45, 747);
+                        addEmployee(stmt, 666, "Flora", 103.45, 747);
+                        addEmployee(stmt, 28, "Frank", 103.45, 747);
+                    addEmployee(stmt, 155, "Johnny", 113.45, 101);
+                        addEmployee(stmt, 983, "Vladimir", 103.45, 155);
+                        addEmployee(stmt, 635, "Mara", 103.45, 155);
+                        addEmployee(stmt, 870, "Akinori", 103.45, 155);
 
                 conn.setAutoCommit(true);
             }
