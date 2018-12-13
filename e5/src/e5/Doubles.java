@@ -1,26 +1,41 @@
 package e5;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.function.DoubleBinaryOperator;
 
 public class Doubles {
 
-    private Reader reader;
+    private BufferedReader bufferedReader;
 
     public Doubles(Reader reader) {
-        this.reader = reader;
+        this.bufferedReader = new BufferedReader(reader);
     }
 
 
-    public Double next() {
-        try {
-            int val = this.reader.read();
+    public Double next() throws IOException {
+        this.bufferedReader.mark(1);
 
+        int val;
+        String s = "";
 
-        } catch (IOException e) {
-            e.printStackTrace();
+        for(;;){
+            val = this.bufferedReader.read();
+
+            if(val == '.')
+                s += val;
+
+            if(val >= '0' && val <= '9')
+                s += val;
+
+            if(Character.isWhitespace(val))
+                break;
         }
 
-        return null;
+        if(s.isEmpty())
+            return null;
+
+        return Double.valueOf(s);
     }
 }

@@ -3,6 +3,11 @@ package e5;
 import java.io.*;
 
 public class TestUTF8 {
+    /*
+    Sarebbe possibile convertire il file originale da windows-1252 in ISO-8859-1 (detta anche ISOLatin1)?
+    NO, i 3 caratteri in questione non sono inclusi.
+    */
+
     public static void main(String[] args) throws IOException {
         String input = "test_cp1252.txt";
         String output = "test_utf8.txt";
