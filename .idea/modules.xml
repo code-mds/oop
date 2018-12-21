@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IO/IO.iml" filepath="$PROJECT_DIR$/IO/IO.iml" />
       <module fileurl="file://$PROJECT_DIR$/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JDBC/JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Reflection/Reflection.iml" filepath="$PROJECT_DIR$/Reflection/Reflection.iml" />
       <module fileurl="file://$PROJECT_DIR$/e1/e1.iml" filepath="$PROJECT_DIR$/e1/e1.iml" />
       <module fileurl="file://$PROJECT_DIR$/e2/e2.iml" filepath="$PROJECT_DIR$/e2/e2.iml" />
       <module fileurl="file://$PROJECT_DIR$/e3/e3.iml" filepath="$PROJECT_DIR$/e3/e3.iml" />
