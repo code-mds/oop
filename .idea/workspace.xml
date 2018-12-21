@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de7d425f-69c7-4ae1-b1a1-3d6aba958670" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/e6/e6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e6/src/Greetings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e6/src/LauncherEx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e6/src/BigDecReflect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e6/src/Hashing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e6/src/crypto/hash/Algorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e6/src/crypto/hash/MD5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e6/src/crypto/hash/SHA_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e6/src/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Reflection/src/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/Reflection/src/Launcher.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,39 +22,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Reflection/src/Launcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="68" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/e6/src/LauncherEx.java">
+        <entry file="file://$PROJECT_DIR$/e6/src/Hashing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="170">
+              <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Arrays.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="3439" column="26" selection-start-line="3439" selection-start-column="26" selection-end-line="3439" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/e6/src/Greetings.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -62,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -129,6 +108,13 @@
         <option value="$PROJECT_DIR$/e5/src/e5/Doubles.java" />
         <option value="$PROJECT_DIR$/Reflection/src/Launcher.java" />
         <option value="$PROJECT_DIR$/e6/src/LauncherEx.java" />
+        <option value="$PROJECT_DIR$/e6/src/BigDecReflect.java" />
+        <option value="$PROJECT_DIR$/e6/src/Es3.java" />
+        <option value="$PROJECT_DIR$/e6/src/crypto/hash/Algorithm.java" />
+        <option value="$PROJECT_DIR$/e6/src/crypto/hash/SHA_1.java" />
+        <option value="$PROJECT_DIR$/e6/src/crypto/hash/MD5.java" />
+        <option value="$PROJECT_DIR$/e6/src/test.txt" />
+        <option value="$PROJECT_DIR$/e6/src/Hashing.java" />
       </list>
     </option>
   </component>
@@ -194,12 +180,12 @@
             </path>
             <path>
               <item name="oop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="e6" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oop" type="b2602c69:ProjectViewProjectNode" />
               <item name="Reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -211,7 +197,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545386620155" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545388722122" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/hsqldb.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -248,7 +234,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LauncherEx">
+  <component name="RunManager" selected="Application.Hashing">
+    <configuration name="BigDecReflect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BigDecReflect" />
+      <module name="e6" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Doubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="e5.Doubles" />
       <module name="e5" />
@@ -258,6 +251,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Hashing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Hashing" />
+      <module name="e6" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -278,46 +278,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCharset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="e5.TestCharset" />
-      <module name="e5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestUTF8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="e5.TestUTF8" />
-      <module name="e5" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="e5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.TestCharset" />
-      <item itemvalue="Application.TestUTF8" />
       <item itemvalue="Application.Doubles" />
       <item itemvalue="Application.Launcher" />
       <item itemvalue="Application.LauncherEx" />
+      <item itemvalue="Application.BigDecReflect" />
+      <item itemvalue="Application.Hashing" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Hashing" />
+        <item itemvalue="Application.BigDecReflect" />
         <item itemvalue="Application.LauncherEx" />
         <item itemvalue="Application.Launcher" />
         <item itemvalue="Application.Doubles" />
-        <item itemvalue="Application.TestUTF8" />
-        <item itemvalue="Application.TestCharset" />
       </list>
     </recent_temporary>
   </component>
@@ -451,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545381949306</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Serie 6 es 1">
+      <created>1545386651382</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1545386651382</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -490,7 +471,7 @@
     <frame x="-6" y="34" width="1381" height="885" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49727628" visible="true" weight="0.24036281" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49727628" visible="true" weight="0.24036281" />
       <window_info id="Structure" order="1" sideWeight="0.50272375" side_tool="true" weight="0.17752184" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -499,7 +480,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.50272375" side_tool="true" weight="0.17752184" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4988086" weight="0.32943925" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6028097" visible="true" weight="0.37704918" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6028097" visible="true" weight="0.2103825" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4973545" weight="0.30369356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -530,7 +511,8 @@
     <MESSAGE value="serie 4" />
     <MESSAGE value="serie 5" />
     <MESSAGE value="Reflection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reflection" />
+    <MESSAGE value="Serie 6 es 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Serie 6 es 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -583,51 +565,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/sql/PreparedStatement.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Iterable.java" />
-    <entry file="file://$PROJECT_DIR$/e3/src/e3/Transactions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e1/src/e1/BoxRuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e2/src/e1/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e2/src/e2/TestE2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" selection-start-line="11" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e3/src/e3/Sqrt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/e3/src/e3/TestSqrt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/System.java" />
     <entry file="file://$PROJECT_DIR$/e3/src/e3/ImmutableStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -849,13 +786,6 @@
     <entry file="file://$PROJECT_DIR$/e6/src/Greetings.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Reflection/src/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Arrays.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -863,10 +793,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/math/BigDecimal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="219" column="38" selection-start-line="219" selection-start-column="32" selection-end-line="219" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e6/src/Es3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e6/src/crypto/hash/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e6/src/crypto/hash/SHA_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="21" />
+          <folding>
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e6/src/crypto/hash/MD5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#116#117#0" expanded="true" />
+            <element signature="e#144#145#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Reflection/src/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/e6/src/LauncherEx.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e6/src/BigDecReflect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e6/src/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/e6/src/Hashing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
