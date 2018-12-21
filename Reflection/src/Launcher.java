@@ -8,7 +8,8 @@ public class Launcher {
 
         Class<?> param = String[].class;
         Method mainMethod = cls.getMethod("main", param);
-        
+
+        // il primo parametro e' il target, siccome main e' statico possiamo passare null
         mainMethod.invoke(null, new Object[] {new String[] { args[1] } });
 
         mainMethod.invoke(null, (Object) new String[] { args[1] } );
