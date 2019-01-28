@@ -1,7 +1,16 @@
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class Test {
     public static void main(String[] args) throws Exception {
+        bitCount();
+        testF();
+        testDump();
+    }
+
+    private static void testDump() {
         Class<?> classes[] = {void.class, int.class, Integer.class};
         for (Class<?> c : classes)
             dump(c);
@@ -12,6 +21,27 @@ public class Test {
             System.out.println(f);
         }
 
+        int i = 1;
+    }
+
+    private static void testF() throws ClassNotFoundException, NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException {
+        Class<?> cls = Class.forName("Test");
+        Constructor<?> ctor = cls.getConstructor();
+        Object o = ctor.newInstance();
+
+        Method m = cls.getMethod("f", int.class);
+        m.invoke(o, new Object [] { 1 });
+    }
+
+    private static void bitCount() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException {
+        Class c = Integer.class;
+        Method mbit = c.getMethod("bitCount", int.class);
+        int res = (int)mbit.invoke(null, 3);
+        System.out.println("bits: " + res);
+    }
+
+    public void f(int c) {
+        System.out.printf("f()");
     }
 
 

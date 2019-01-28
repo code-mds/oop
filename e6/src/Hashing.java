@@ -18,7 +18,7 @@ public class Hashing {
     }
 
     public static Algorithm instanceFor(String algo, long id) throws NoSuchMethodException, ClassNotFoundException, IllegalAccessException, InvocationTargetException, InstantiationException {
-        Class cls = Class.forName(algo);
+        Class<Algorithm> cls = (Class<Algorithm>)Class.forName(algo);
         Constructor<Algorithm> c = cls.getConstructor(long.class);
         Algorithm o = c.newInstance(id);
         return o;

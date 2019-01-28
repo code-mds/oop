@@ -22,7 +22,7 @@ public class Input {
      * Here, an example of passing a FileInputStream...
      */
     private static void dumpFileInputStream(String[] args) throws IOException {
-        try (FileInputStream fin = new FileInputStream(args[0]);) {
+        try (FileInputStream fin = new FileInputStream(args[0])) {
             dumpInputStream(fin);
         }
     }
@@ -45,8 +45,8 @@ public class Input {
      * 
      * A similar OutputStreamWriter does the opposite, translating a Writer to an OutputStream.
      */
-    private static void dumpFileReader(String[] args) throws IOException, UnsupportedEncodingException {
-        try (Reader in = new InputStreamReader(new FileInputStream(args[0]), "UTF-8");) {
+    private static void dumpFileReader(String[] args) throws IOException {
+        try (Reader in = new InputStreamReader(new FileInputStream(args[0]), "UTF-8")) {
             dumpReader(in);
         }
     }
@@ -61,7 +61,7 @@ public class Input {
      * Thus, an InputStream returns the byte 0x80, while a Reader with encoding CP1252 returns the char 0x20AC,
      * even if CP1252 is a 1 byte/character encoding.
      */
-    private static void dumpByteArrayReader() throws IOException, UnsupportedEncodingException {
+    private static void dumpByteArrayReader() throws IOException {
         try (Reader in = new InputStreamReader(new ByteArrayInputStream(new byte[] {0x30, 0x31, (byte) 0x80}), "CP1252");) {
             dumpReader(in);
         }

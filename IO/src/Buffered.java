@@ -1,7 +1,4 @@
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
 public class Buffered {
 
@@ -41,7 +38,9 @@ public class Buffered {
     }
 
     private static void unbuffered(String path) {
-        try (FileInputStream in = new FileInputStream(path)) {
+        //java.io.RandomAccessFile
+
+        try (InputStream in = new FileInputStream(path)) {
             for (; in.read() >= 0;);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
